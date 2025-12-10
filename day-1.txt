@@ -1,0 +1,131 @@
+============================================================
+           JAVA PROGRAMMING CONCEPTS - STUDY NOTES
+============================================================
+
+TABLE OF CONTENTS:
+1. Programming Language Basics
+2. The Java Ecosystem (JDK, JRE, JVM)
+3. How Java Runs Code (Compilers)
+4. Memory Management (Stack vs. Heap)
+5. The Class Loader (Deep Dive)
+6. Core Concepts (Threads & Datatypes)
+
+============================================================
+1. PROGRAMMING LANGUAGE BASICS
+============================================================
+
+[A] PROGRAMMING LANGUAGE
+    - Definition: A set of instructions used to talk to computers.
+    - Analogy: Like using English or Hindi to communicate with humans.
+
+[B] HIGH-LEVEL VS. LOW-LEVEL
+    - High-Level (e.g., Java, Python):
+      * Uses English words (if, while, print).
+      * Easy for humans to read and write.
+    - Low-Level (e.g., Assembly, Binary):
+      * Uses machine codes (0s and 1s) or hardware instructions.
+      * Very fast but hard for humans to understand.
+
+[C] STRUCTURED PROGRAMMING
+    - Definition: Code is organized into logical blocks (loops, if-else).
+    - Benefit: Prevents messy "spaghetti code."
+
+[D] STATIC VS. DYNAMIC LANGUAGES
+    - Static (Java):
+      * STRICT. You must define the type of data first (e.g., int x = 5).
+      * Errors are caught BEFORE running the app (Compile time).
+    - Dynamic (Python, JS):
+      * FLEXIBLE. You can change data types anytime.
+      * Errors are caught WHILE running the app (Runtime).
+
+[E] MARKUP LANGUAGES (e.g., HTML, XML)
+    - Note: These are NOT programming languages.
+    - Usage: Used for formatting text or structure, not for logic/math.
+
+============================================================
+2. THE JAVA ECOSYSTEM (JDK, JRE, JVM)
+============================================================
+
+Imagine a Restaurant:
+
+[A] JDK (Java Development Kit) -> "THE KITCHEN"
+    - Who needs it: Developers (Programmers).
+    - Contains: Tools to write code (Compiler) + Environment to run it (JRE).
+
+[B] JRE (Java Runtime Environment) -> "THE DINING HALL"
+    - Who needs it: Users (Clients).
+    - Contains: Just enough libraries to RUN the program. You cannot write code here.
+
+[C] JVM (Java Virtual Machine) -> "THE CHEF"
+    - Role: The Translator.
+    - Function: Converts Java Bytecode into instructions the specific computer (Windows/Mac) understands.
+    - Key Feature: Makes Java "Platform Independent" (Write Once, Run Anywhere).
+
+============================================================
+3. HOW JAVA RUNS CODE
+============================================================
+
+[A] COMPILER (javac)
+    - Role: Translates human code (.java) into Bytecode (.class).
+    - Why: The computer cannot read English; it needs Bytecode.
+
+[B] JIT COMPILER (Just-In-Time)
+    - Role: Performance Booster.
+    - How: Instead of reading line-by-line, it identifies frequently used code ("hotspots") and compiles them instantly into native machine code for speed.
+
+============================================================
+4. MEMORY MANAGEMENT
+============================================================
+
+[A] STACK MEMORY
+    - Analogy: A sticky-note pad.
+    - Usage: Stores temporary variables and method calls.
+    - Behavior: Last-In, First-Out (LIFO). Very fast, automatically cleared when a method ends.
+
+[B] HEAP MEMORY
+    - Analogy: A large storage warehouse.
+    - Usage: Stores Objects (new Student(), new String()).
+    - Behavior: Objects stay here until they are destroyed. Slower than Stack but holds more data.
+
+[C] GARBAGE COLLECTION (GC)
+    - Analogy: Automatic Cleaning Crew.
+    - Function: You do not need to delete memory manually. The GC looks at Heap memory, finds unused objects, and deletes them to free up space.
+
+============================================================
+5. THE CLASS LOADER (IN BRIEF)
+============================================================
+
+[A] DEFINITION
+    - A subsystem of the JVM responsible for loading .class files into memory.
+
+[B] KEY CONCEPT: "DYNAMIC LOADING"
+    - The JVM does not load all files at once.
+    - It acts like a Librarian: It fetches a file from the disk only when the program actually asks for it.
+
+[C] THE HIERARCHY (DELEGATION MODEL)
+    1. Bootstrap Class Loader (Grandparent):
+       - Loads core Java libraries (String, System, etc.).
+    2. Extension Class Loader (Parent):
+       - Loads extra standard libraries.
+    3. Application Class Loader (Child):
+       - Loads the code YOU wrote.
+
+    * Note: When a class is needed, the Child asks the Parent, who asks the Grandparent.
+
+============================================================
+6. CORE CONCEPTS
+============================================================
+
+[A] MULTITHREADING
+    - Definition: Doing multiple things at the same time.
+    - Example: Downloading a file in the background while keeping the app screen responsive.
+
+[B] DATATYPES
+    - Primitive (e.g., int, boolean):
+      * Stores the ACTUAL value (e.g., 10, true).
+      * Lives in the Stack.
+    - Non-Primitive (e.g., String, Array, Class):
+      * Stores a REFERENCE (address) to the object.
+      * The reference lives in the Stack, but the data lives in the Heap.
+
+============================================================
