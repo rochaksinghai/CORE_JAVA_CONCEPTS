@@ -1,0 +1,121 @@
+============================================================
+                  CORE JAVA TOPICS NOTES
+============================================================
+
+1. TOKENS IN JAVA
+------------------------------------------------------------
+A token is the smallest building block of a Java program. The compiler breaks code into these parts.
+
+A. Keywords:
+   - Reserved words with predefined meanings.
+   - Examples: int, class, public, void, if, while.
+
+B. Identifiers:
+   - Names given to classes, methods, variables, and packages.
+   - Rules: Must start with a letter, _, or $. Cannot be a keyword.
+   - Examples: myVariable, CalculateSum.
+
+C. Literals:
+   - Constant values assigned to variables.
+   - Examples: 100 (int), 10.5 (double), 'A' (char), "Hello" (String).
+
+D. Operators:
+   - Symbols for operations.
+   - Examples: +, -, *, / (Math); ==, != (Comparison); &&, || (Logic).
+
+E. Comments:
+   - Ignored by the compiler. Used for documentation.
+   - Single-line: // Comment
+   - Multi-line: /* Comment */
+
+F. Separators (Symbols):
+   - ; (Terminates statement)
+   - , (Separates values)
+   - {} (Defines scope/block)
+   - () (Parameters/Conditions)
+
+
+2. TYPE CONVERSION (CASTING)
+------------------------------------------------------------
+The process of converting a value from one data type to another.
+
+A. Implicit Conversion (Widening):
+   - Automatic. Smaller type to larger type.
+   - No data loss.
+   - Order: byte -> short -> int -> long -> float -> double
+   - Example: int x = 5; double y = x; // y becomes 5.0
+
+B. Explicit Conversion (Narrowing):
+   - Manual. Larger type to smaller type.
+   - Potential data loss.
+   - Example: double x = 9.7; int y = (int) x; // y becomes 9
+
+
+3. ACCESS MODIFIERS
+------------------------------------------------------------
+Controls the visibility of classes, variables, and methods.
+
+A. public:
+   - Accessible from ANYWHERE.
+
+B. protected:
+   - Accessible in the same package AND by subclasses (even in different packages).
+
+C. Default (no keyword):
+   - Accessible ONLY within the same package.
+
+D. private:
+   - Accessible ONLY within the class it is defined in.
+
+
+4. SYSTEM.OUT.PRINTLN() EXPLAINED
+------------------------------------------------------------
+Statement: System.out.println("Hello");
+
+A. System:
+   - A final class in java.lang package.
+
+B. out:
+   - A static member field of the System class.
+   - Represents "Standard Output" (console).
+
+C. println():
+   - A method of the PrintStream class.
+   - Prints the argument and moves the cursor to a new line.
+
+
+5. DIFFERENCE BETWEEN OUT, IN, AND ERR
+------------------------------------------------------------
+All are streams located in the 'System' class.
+
+A. System.out (Standard Output):
+   - Connected to console.
+   - Used for valid program output.
+
+B. System.in (Standard Input):
+   - Connected to keyboard.
+   - Used for reading user input.
+
+C. System.err (Standard Error):
+   - Connected to console.
+   - Used for error messages. often printed in RED by IDEs.
+
+
+6. THE MAIN METHOD
+------------------------------------------------------------
+Signature: public static void main(String[] args)
+
+A. public:
+   - Must be accessible by the JVM from outside the code.
+
+B. static:
+   - Allows JVM to call it without creating an object of the class first.
+
+C. void:
+   - Does not return any value to the JVM.
+
+D. main:
+   - The specific identifier JVM looks for to start the program.
+
+E. String[] args:
+   - Accepts command-line arguments as an array of Strings.
