@@ -1,0 +1,146 @@
+package domain;
+import java.util.Scanner;
+
+public class Loops {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		
+		/*
+		// in case of datatype
+		
+		System.out.println("Enter a number:");
+        int a = sc.nextInt();
+        
+        System.out.println("Enter another number:");
+        int b = sc.nextInt();
+        System.out.println(a == b);
+       */
+		
+	/*	int day = 2;
+        
+        switch(day) {
+        case 1:
+        	System.out.println("Monday");
+        	break;
+        case 2:
+        	System.out.println("Tuesday");
+        	break;
+        case 3:
+        	System.out.println("Wednesday");
+        	break;
+        
+        default:
+        	System.out.println("Invalid day");
+        }
+    
+	*/
+		
+	
+		// in case of objects
+		
+		String s1 = new String("Java");
+		String s2 = new String("Java");
+
+	//	System.out.println(s1 == s2);   // false
+		System.out.println(s1.equals(s2)); // true
+		
+	
+   
+		
+	/*	
+			
+	  
+	   // IF ESLE
+		
+		int marks = 40;
+
+		if(marks >= 35) {
+		    System.out.println("Pass");
+		} else {
+		    System.out.println("Fail");
+		}
+		
+	*/
+	
+		
+	/*
+		
+		// Nested if-else
+		
+		int marks = 65;
+
+		if(marks >= 35) {
+		    if(marks >= 75) {
+		        System.out.println("Distinction");
+		    } else {
+		        System.out.println("Pass");
+		    }
+		} else {
+		    System.out.println("Fail");
+		}
+	
+*/
+			
+	/*	for(int i = 1 ;i <= 5; i++)
+		{
+			if(i == 3) {
+				continue;
+			}
+			System.out.println(i);
+		}
+	*/
+		/*
+
+	int i = 1;
+	do {
+		System.out.println("Hello!");
+		System.out.println(i);
+		i++;
+	}
+	while(i <= 5);
+	}
+	
+*/
+	}
+}
+
+
+
+
+
+
+//IF–ELSE Based Coding Questions (5 Questions)
+/* Q1. Check Odd or Even
+Q2. Check Vowel or Consonant
+Q3. Find Largest of Three Numbers
+Q4. Check Eligibility for Voting
+Q5. Check if Number is Positive, Negative or Zero 
+
+SWITCH Based Coding Questions (5 Questions)
+Q1. Day of Week
+Q2. Simple Calculator
+Q3. Month Name
+Q4. Grade System
+Q5. Check Vowel or Consonant
+
+FOR LOOP
+Q1. Print numbers 1 to 10
+Use a for-loop to print 1,2,3…10.
+Q2. Print even numbers from 1 to 20
+Print only even numbers.
+
+while loop
+Q3. Print odd numbers from 1 to 20
+Q4. Print table of 5
+5 × 1 … 5 × 10
+Q5. Print first N natural numbers
+
+Do while 
+Q6. Print numbers from 10 to 1 (reverse order)
+Q7. Print alphabets from A to Z
+Q8. Print sum of first 10 natural numbers
+*/
+
+
+
